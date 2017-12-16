@@ -6,14 +6,16 @@ import arithmetic_actions.BasicActions;
 
 public class Main {
 
+	private static final Scanner sc = new Scanner(System.in);
+
+	private static final String MENU = "Enter the first number then choose action ('+', '-', '*', '/') then the second number.";
+	private static final String ERROR = "ERR";
+
 	public static void main(String[] args) {
 
 		BasicActions arithmetic = new BasicActions();
 
-		Scanner sc = new Scanner(System.in);
-
-		System.out
-				.println("Enter the first numbet then (+, -, *, /) then the second number.");
+		System.out.println(MENU);
 		double a = sc.nextDouble();
 		String action = sc.next();
 		double b = sc.nextDouble();
@@ -32,7 +34,7 @@ public class Main {
 			System.out.println(arithmetic.divide(a, b));
 			break;
 		default:
-			System.out.println("Incorrect data entered.");
+			System.out.println(ERROR);
 			break;
 		}
 	}
