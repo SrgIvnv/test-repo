@@ -23,4 +23,8 @@ public class BasicActions {
 	public double pow(double a, double b) {
 		return Math.pow(a, b);
 	}
+
+	public double max(double a, double b) {
+		return Math.max(a, b);
+	}
 }
