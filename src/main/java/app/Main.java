@@ -15,27 +15,28 @@ public class Main {
 
 		BasicActions arithmetic = new BasicActions();
 
-		System.out.println(MENU);
-		double a = sc.nextDouble();
-		String action = sc.next();
-		double b = sc.nextDouble();
-
-		switch (action) {
-		case "+":
-			System.out.println(arithmetic.add(a, b));
-			break;
-		case "-":
-			System.out.println(arithmetic.subtract(a, b));
-			break;
-		case "*":
-			System.out.println(arithmetic.multiply(a, b));
-			break;
-		case "/":
-			System.out.println(arithmetic.divide(a, b));
-			break;
-		default:
-			System.out.println(ERROR);
-			break;
+		while (true) {
+			System.out.println(MENU);
+			double a = sc.nextDouble();
+			String action = sc.next();
+			double b = sc.nextDouble();
+			switch (action) {
+			case "+":
+				System.out.println(arithmetic.add(a, b));
+				break;
+			case "-":
+				System.out.println(arithmetic.subtract(a, b));
+				break;
+			case "*":
+				System.out.println(arithmetic.multiply(a, b));
+				break;
+			case "/":
+				System.out.println(arithmetic.divide(a, b));
+				break;
+			default:
+				System.out.println(ERROR);
+				break;
+			}
 		}
 	}
 }
