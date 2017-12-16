@@ -19,4 +19,8 @@ public class BasicActions {
 			throw new ArithmeticException();
 		return a / b;
 	}
+
+	public double pow(double a, double b) {
+		return Math.pow(a, b);
+	}
 }

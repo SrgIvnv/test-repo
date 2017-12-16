@@ -8,7 +8,7 @@ public class Main {
 
 	private static final Scanner sc = new Scanner(System.in);
 
-	private static final String MENU = "Enter the first number then choose action ('+', '-', '*', '/') then the second number.";
+	private static final String MENU = "Enter the first number then choose action ('+', '-', '*', '/', 'pow') then the second number.";
 	private static final String ERROR = "ERR";
 
 	public static void main(String[] args) {
@@ -18,7 +18,7 @@ public class Main {
 		while (true) {
 			System.out.println(MENU);
 			double a = sc.nextDouble();
-			String action = sc.next();
+			String action = sc.next().toLowerCase();
 			double b = sc.nextDouble();
 			switch (action) {
 			case "+":
@@ -32,6 +32,9 @@ public class Main {
 				break;
 			case "/":
 				System.out.println(arithmetic.divide(a, b));
+				break;
+			case "pow":
+				System.out.println(arithmetic.pow(a, b));
 				break;
 			default:
 				System.out.println(ERROR);
