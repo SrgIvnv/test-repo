@@ -8,7 +8,7 @@ public class Main {
 
 	private static final Scanner sc = new Scanner(System.in);
 
-	private static final String MENU = "Enter the first number then choose action ('+', '-', '*', '/', 'pow', 'max') then the second number.";
+	private static final String MENU = "Enter the first number then choose action ('+', '-', '*', '/', 'pow', 'max', 'min') then the second number.";
 	private static final String ERROR = "ERR";
 
 	public static void main(String[] args) {
@@ -38,6 +38,9 @@ public class Main {
 				break;
 			case "max":
 				System.out.println(arithmetic.max(a, b));
+				break;
+			case "min":
+				System.out.println(arithmetic.min(a, b));
 				break;
 			default:
 				sc.close();
